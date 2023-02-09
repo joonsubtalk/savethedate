@@ -1,203 +1,20 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 90vh;
-}
-.card {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  height: 100%;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-  opacity: .4;
-  -webkit-tap-highlight-color: transparent;
-}
-.card:hover {
-  opacity: 0;
-}
-
-.and {
-  font-size: 2.5em;
-  font-family: 'Mr De Haviland', cursive;
-}
 .top {
   height: 23em;
   width: 100%;
   position: fixed;
+  z-index: -1;
   top: 0;
   background: url("../public/top-rose.jpg") no-repeat top right fixed;
 }
-.row {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  margin-bottom: .2em;
-}
-.divider {
-  opacity: .8;
-  border-bottom: 1px solid rgba(27, 31, 35, 0.5);
-  width: 90px;
-  height: 1px;
-}
-.date {
-  margin-top: 1.5em;
-}
-.info {
-  padding: 2.75em 1.25em;
-}
-.imgus {
-  display: none;
-  width: 600px;
-  position: relative;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  background-image: url('https://joonhane.com/us.jpg');
-  transition: all .3s ease-out;
-}
-
-.main:hover .imgus{
-  transform: scale(1.58) translate(-49%, -50%);
-}
-
-.save {
-  font-size: 6rem;
-  line-height: 1;
-  text-align: center;
-  margin: .2em 0 .5em;
-  opacity: .9;
-  font-weight: 400;
-}
-
-.featured {
-  display: flex;
-  justify-content: center;
-}
-.us {
-  overflow: hidden;
-}
 .main {
   background-color: white;
-  position: fixed;
-  width: 90%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 233;
   text-align: center;
-  transition: all 0.3s ease-in;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-}
-.italic {
-  font-family:'Times New Roman', Times, serif;
-  font-style: italic;
-  opacity: .8;
-  letter-spacing: .05em;
-  margin-bottom: .75em;
-}
-.name {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.65em;
-  opacity: .8;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-.follow {
-  margin: 1.5em 0 1.75em;
-  font-size: 1rem;
-  opacity: .8;
-}
-
-.main:hover {
-  box-shadow:  rgba(94, 94, 136, 0.25) 0px 50px 100px -20px, rgba(160, 80, 80, 0.3) 0px 30px 60px -30px;
-}
-
-.buttonRow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.cal {
-  margin-right: .5em;
-}
-
-.cal {
-  height: 1.1em;
-}
-
-/* CSS */
-.button {
-  appearance: none;
-  background-color: #fff;
-  border: 1px solid rgba(27, 31, 35, 0.5);
-  border-radius: 6px;
-  /* box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset; */
-  box-sizing: border-box;
-  color: #24292E;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 500;
-  line-height: 20px;
-  list-style: none;
-  padding: 1em 2em;
-  position: relative;
-  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  white-space: nowrap;
-  word-wrap: break-word;
-}
-
-.button:hover {
-  background-color: #F3F4F6;
-  text-decoration: none;
-  transition-duration: 0.1s;
-}
-
-.button:disabled {
-  background-color: #FAFBFC;
-  border-color: rgba(27, 31, 35, 0.15);
-  color: #959DA5;
-  cursor: default;
-}
-
-.button:active {
-  background-color: #EDEFF2;
-  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
-  transition: none 0s;
-}
-
-.button:focus {
-  outline: 1px transparent;
-}
-
-.button:before {
-  display: none;
-}
-
-.button:-webkit-details-marker {
-  display: none;
-}
-.dn {
-  display: none;
-}
-.tooltip {
-  /* display: none; */
-  position: absolute;
-  top: -150%;
-  left: 50%;
-  transform: translate(-50%, -35%);
   padding: 2em;
-  background-color: white;
-  border: 1px solid rgba(27, 31, 35, 0.5);
+  position: relative;
+  font-family: 'Playfair Display', serif;
+  margin: 2.5em;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .bottom {
@@ -207,112 +24,25 @@
   transform: rotate(180deg);
   position: fixed;
   bottom: 0;
+  z-index: -1;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .us {
-    /* display: none; */
-    position: absolute;
-    z-index: -1;
-    transform: rotateY(180deg); 
-  }
-  .featured:hover .us{
-    opacity: 0;
-  }
+.uname {
+  font-family: Playfair Display,serif;
+  font-size: 1.65em;
+  opacity: .8;
+  letter-spacing: .1em;
+  text-transform: uppercase;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .imgus {
-    display: none;
-  }
-  .info {
-    width: 390px;
-  }
-  .main {
-    width: unset;
-  }
+.uitalic {
+  font-family: Times New Roman,Times,serif;
+  font-style: italic;
+  opacity: .8;
+  letter-spacing: .05em;
+  margin-bottom: .75em;
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .imgus {
-    display: block;
-    width: 350px;
-    top: 86%;
-    left: 140%;
-    transform: scale(2.75) translate(-50%, -50%);
-  }
-  
-  .main:hover .imgus{
-    transform: scale(2.8) translate(-50%, -50%);
-  }
-  .info {
-    width: 390px;
-  }
+.h1 {
+  font-weight: 400;
 }
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .imgus {
-    display: block;
-    width: 500px;
-    top: 74%;
-    left: 89%;
-    transform: scale(1.9) translate(-50%, -50%);
-  }
-  
-  .main:hover .imgus{
-    transform: scale(1.89) translate(-49%, -50%);
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .imgus {
-    display: block;
-    width: 600px;
-    top: 73%;
-    left: 79%;
-    transform: scale(1.6) translate(-50%, -51%);
-  }
-  
-  .main:hover .imgus{
-    transform: scale(1.58) translate(-48%, -52%);
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  .imgus {
-    display: block;
-    width: 800px;
-    top: 60%;
-    left: 62%;
-    transform: scale(1.2) translate(-50%, -50%);
-  }
-  
-  .main:hover .imgus{
-    transform: scale(1.25) translate(-49.5%, -50%);
-  }
-}
-
-/* @media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
-} */
